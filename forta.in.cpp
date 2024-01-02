@@ -9,23 +9,22 @@ using std::vector;
 using std::max_element;
 using std::ofstream;
 
-int alpha = 0; //numarul de 
-int beta = 0;
+int alpha = 0; //numarul de numere
+int beta = 0; //numerele introduse de utilizator
 int delta = 0; //lista fortelor
 int zeta = 0; //forta/suma divizorilor maxima
 int sigma = 0;
-int omicron = 0;
+int omicron = 0; // problema (adica t-ul , fiind 1 sau 2)
 int tau = 0;
 
 vector<int> gamma; //numerele trimise de utilizator
-vector<int> theta;
-vector<int> epsilon;
 vector<int> phi;
+vector<int> epsilon;
 
 int main(void)
 {
 	cin >> omicron;
-	if (omicron == 1) 
+	if (omicron == 1)
 	{
 		cin >> alpha;
 		for (int x = 0; x < alpha; ++x)
@@ -57,7 +56,7 @@ int main(void)
 			}
 			if (sigma == zeta)
 			{
-				ofstream FortaOut("forta.out.txt");
+				ofstream FortaOut("./forta.out.txt");
 				FortaOut << zeta;
 				FortaOut.close();
 				return 0;
@@ -94,7 +93,7 @@ int main(void)
 			phi.push_back(tau);
 		}
 		zeta = *max_element(phi.begin(), phi.end());
-		ofstream FortaOut("forta.out.txt");
+		ofstream FortaOut("./forta.out.txt");
 		FortaOut << zeta;
 		FortaOut.close();
 		return 0;
